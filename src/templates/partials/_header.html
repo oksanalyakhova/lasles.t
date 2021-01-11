@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <a data-href="#about" class="logo site-link">
+          {{mixins.icon('logo')}}
+          <span>Lasles<b>VPN</b></span>
+        </a>
+      </div>
+      <div class="header__nav">
+        {% include "./_menu.html" %}
+      </div>
+      <div class="header__burger">
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="header__auth">
+        <div class="auth">
+          <div class="btn sign-in" data-popup-handler="signin">
+            Sign in
+          </div>
+          <div class="btn sign-up" data-popup-handler="signup">
+            Sign up
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="mobile-nav"></div>

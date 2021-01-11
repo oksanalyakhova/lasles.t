@@ -1,0 +1,48 @@
+<footer class="footer">
+  {% include "./_subscribe.html" %}
+  <div class="footer__wrapper">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__logo">
+          <a data-href="#about" class="logo site-link">
+            {{mixins.icon('logo')}}
+            <span>Lasles<b>VPN</b></span>
+          </a>
+        </div>
+        <div class="footer__about text text_m">
+          <b>LaslesVPN</b> is a private virtual network that has unique features and has high security.
+        </div>
+        <div class="footer__socials">
+          {% include "./_socials.html" %}
+        </div>
+        <div class="footer__copy">
+          ©2020LaslesVPN
+        </div>
+        <div class="footer__nav">
+          <nav class="footer-nav" aria-label="Site navigation">
+            <ul class="menu">
+              {% for item in data.footerNav %}
+              <li class="menu__item">
+                <a class="menu__link" href="{{ item.url }}">
+                  {{ item.label }}
+                </a>
+                {% if item.siteMapSub %}
+                <ul class="submenu">
+                  {% for item in item.siteMapSub %}
+                  <li class="submenu__item">
+                    <a class="submenu__link" href="{{ item.url }}">
+                      {{ item.label }}
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

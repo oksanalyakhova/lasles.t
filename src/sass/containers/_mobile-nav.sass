@@ -1,0 +1,81 @@
+.mobile-nav
+	padding: 100px 15px 70px
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 998
+	width: 100%
+	height: 100%
+	display: flex
+	flex-direction: column-reverse
+	background-color: $c-white
+	opacity: 0
+	pointer-events: none
+	+pseudo
+	&.is-animated
+		opacity: 1
+		pointer-events: all
+		&::before,
+		&::after
+			transform: scaleY(1)
+			transform-origin: 0 0
+			+trans(transform)
+		&::after
+			transition-delay: .5s
+	&.is-visible
+		&::before,
+		&::after
+			transform: scaleY(0)
+			transform-origin: 0 100%
+			+trans(transform)
+		&::before
+			transition-delay: .5s
+		.site-nav,
+		.auth
+			opacity: 1
+			+trans(opacity)
+			transition-delay: 1s
+	&::before,
+	&::after
+		width: 100%
+		height: 100%
+		transform: scaleY(0)
+		transform-origin: 0 100%
+		+trans(transform)
+	&::before
+		background-color: $c-theme
+	&::after
+		background-color: $c-white
+	.site-nav,
+	.auth
+		opacity: 0
+	.site-nav
+		margin-bottom: 20px
+		max-height: calc(100vh - 233px)
+		flex-grow: 1
+		display: flex
+		justify-content: center
+		align-items: center
+		overflow-y: auto
+		&::-webkit-scrollbar
+			width: 2px
+		&::-webkit-scrollbar-track
+			box-shadow: inset 0 0 6px $c-theme-opacity
+		&::-webkit-scrollbar-thumb
+			background: $c-theme
+		.menu
+			&__item
+				margin-bottom: 5px
+			&__link
+				padding: 5px 0
+				font-family: $f-medium
+				font-size: 18px
+				line-height: 30px
+				text-align: center
+				color: $c-text-dark
+	.auth
+		display: flex
+		justify-content: center
+		align-items: center
+		& > * + *
+			margin: 0 0 0 15px

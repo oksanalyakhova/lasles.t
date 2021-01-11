@@ -1,0 +1,102 @@
+.help-slider-container
+	margin-right: -150px
+	overflow: visible
+	+r(1439)
+		margin-right: -50px
+.help-slider
+	&__slide
+		padding: 30px
+		width: 23.334vw
+		height: auto
+		display: flex
+		background-color: $c-white
+		border: 2px solid
+		border-color: #DDDDDD
+		border-radius: 10px
+		+pseudo
+		+r(1023)
+			width: 43.334vw
+		+r(899)
+			width: 63.334vw
+		&::before
+			top: 0
+			+center(h)
+			z-index: -1
+			width: 79.5875%
+			height: 130.79%
+			background-color: #0D1025
+			filter: blur(114px)
+			opacity: 0
+			border-radius: 10px
+		&.swiper-slide-prev
+			opacity: 0
+			+trans(opacity)
+		&.swiper-slide-active
+			border-color: $c-theme
+			+trans(border-color)
+			&::before
+				opacity: 0.06
+				+trans(opacity)
+.help-slider-nav
+	margin-top: 60px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	+r(1023)
+		margin-top: 40px
+	& > * + *
+		margin: 0 0 0 30px
+	&__pagination
+		position: unset
+		display: flex
+		text-align: unset
+		& > * + *
+			margin: 0 0 0 15px
+			+r(899)
+				margin: 0 0 0 8px
+		.swiper-pagination-bullet
+			width: 15px
+			height: 15px
+			background-color: #DDE0E4
+			border-radius: 50%
+			+r(899)
+				width: 8px
+				height: 8px
+			+trans
+			&-active
+				width: 45px
+				background-color: $c-theme
+				border-radius: 15px
+				+r(899)
+					width: 20px
+	&__buttons
+		display: flex
+		& > * + *
+			margin: 0 0 0 20px
+			+r(899)
+				margin: 0 0 0 10px
+	&__button
+		margin-top: 0
+		position: unset
+		width: 60px
+		height: 60px
+		text-indent: -9999px
+		background-color: $c-white
+		border: 2px solid $c-theme
+		border-radius: 50%
+		+trans(background-color)
+		+r(899)
+			width: 40px
+			height: 40px
+		&:hover
+			background-color: $c-theme
+			.icon
+				fill: $c-white
+		.icon
+			width: 20px
+			height: 17.5px
+			fill: $c-theme
+			+trans(fill)
+			+r(899)
+				width: 15px
+				height: 13px

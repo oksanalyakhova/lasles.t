@@ -1,0 +1,23 @@
+.clients
+	display: flex
+	+r(1023)
+		padding-right: 15px
+		width: fit-content
+	& > * + *
+		margin: 0 0 0 4.4708vw
+		+r(1023)
+			margin: 0 0 0 50px
+		+r(899)
+			margin: 0 0 0 30px
+	&__item
+		flex-grow: 1
+		display: flex
+		justify-content: center
+		+r(1023)
+			width: 150px
+			flex: none
+		+r(899)
+			width: 86px
+		img
+			width: 100%
+			height: auto

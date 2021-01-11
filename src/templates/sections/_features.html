@@ -1,0 +1,13 @@
+<section id="features" class="features">
+  <div class="container">
+    <div class="features__wrapper">
+      <div class="features__media">
+        {% include "svg/_features-svg.html" %}
+      </div>
+      <div class="features__content">
+        {% set items = data.features %}
+        {{ block.blockText('has-list', 'features', 'We Provide Many Features You Can Use', 'm', 'You can explore the features that we provide with fun and have their own functions each feature.', items) }}
+      </div>
+    </div>
+  </div>
+</section>

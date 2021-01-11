@@ -1,0 +1,82 @@
+<section id="pricing" class="pricing">
+  <div class="container">
+    <div class="pricing__wrapper">
+      {{ block.blockText(null, 'pricing', 'Choose Your Plan', 'm', 'Let&#39;s choose the package that is best for you and explore it happily and cheerfully.') }}
+      <div class="plans-wrap">
+        <div class="pricing__plans">
+          <div class="plans">
+            <div class="plans__item plan">
+              <div class="plan__media">
+                {% include "svg/_free.html" %}
+              </div>
+              <div class="plan__title">
+                Free Plan
+              </div>
+              <ul class="plan__list">
+                {% for item in data.freePlan %}
+                <li>
+                  {{ item.text | safe }}
+                </li>
+                {% endfor %}
+              </ul>
+              <div class="plan__price">
+            <span class="data">
+              Free
+            </span>
+              </div>
+              {{ mixins.linkTheme('s', 'btn-theme_reverse', 'Select', '#') }}
+            </div>
+            <div class="plans__item plan">
+              <div class="plan__media">
+                {% include "svg/_standard.html" %}
+              </div>
+              <div class="plan__title">
+                Standard Plan
+              </div>
+              <ul class="plan__list">
+                {% for item in data.standartPlan %}
+                <li>
+                  {{ item.text | safe }}
+                </li>
+                {% endfor %}
+              </ul>
+              <div class="plan__price">
+            <span class="data">
+              $9
+            </span>
+                <span class="label">
+              / mo
+            </span>
+              </div>
+              {{ mixins.linkTheme('s', 'btn-theme_reverse', 'Select', '#') }}
+            </div>
+            <div class="plans__item plan">
+              <div class="plan__media">
+                {% include "svg/_premium.html" %}
+              </div>
+              <div class="plan__title">
+                Premium Plan
+              </div>
+              <ul class="plan__list">
+                {% for item in data.premiumPlan %}
+                <li>
+                  {{ item.text | safe }}
+                </li>
+                {% endfor %}
+              </ul>
+              <div class="plan__price">
+            <span class="data">
+              $12
+            </span>
+                <span class="label">
+              / mo
+            </span>
+              </div>
+              {{ mixins.linkTheme('s', 'btn-theme_reverse', 'Select', '#') }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

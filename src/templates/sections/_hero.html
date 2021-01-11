@@ -1,0 +1,28 @@
+<section id="hero" class="hero">
+  <div class="container">
+    <div class="hero__wrapper">
+      <div class="hero__content">
+        {{ block.blockText(null, 'hero', 'Want anything to be easy with <b>LaslesVPN</b>.', 'l', 'Provide a network for all your needs with ease and fun using <b>LaslesVPN</b> discover interesting features from us.') }}
+        {{ mixins.linkTheme('m', 'site-link', 'Get Started', '', '#features') }}
+      </div>
+      <div class="hero__media">
+        {% include "svg/_hero-svg.html" %}
+      </div>
+    </div>
+    <div class="hero__results">
+      <div class="results">
+        {% for item in data.results %}
+        <div class="results__item">
+          <div class="icon-wrap">
+            <svg class="icon icon-{{item.icon}}"><use xlink:href="img/sprite.svg#icon-{{item.icon}}"></use></svg>
+          </div>
+          <div class="content">
+            <div class="data">{{ item.data }}</div>
+            <div class="label">{{ item.label }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

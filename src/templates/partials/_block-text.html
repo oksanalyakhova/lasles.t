@@ -1,0 +1,25 @@
+{% macro blockText(cont, class, title, titleSize, text, items) %}
+  <div class="{{ class }}__block-text block-text">
+    {% if titleSize == "l" %}
+    <h1 class="{{ class }}__title title title_l">
+      {{ title | safe }}
+    </h1>
+    {% elif titleSize == "m" %}
+    <h2 class="{{ class }}__title title title_m">
+      {{ title | safe }}
+    </h2>
+    {% endif %}
+    <div class="{{ class }}__text text text_m">
+      {{ text | safe }}
+      {% if cont == "has-list" %}
+      <ul>
+        {% for item in items %}
+        <li>
+          {{ item.text | safe }}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}

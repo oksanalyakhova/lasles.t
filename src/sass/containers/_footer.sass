@@ -1,0 +1,82 @@
+.footer
+	position: relative
+	&__wrapper
+		background-color: $c-bg-grey
+	&__content
+		padding: 63.5px 0 100px
+		display: grid
+		grid-template-columns: 30.2222%  1fr
+		grid-template-rows: repeat(3, auto) 1fr
+		grid-row-gap: 20px
+		+r(1023)
+			padding: 43.5px 0 60px
+			grid-template-columns:  1fr
+			grid-template-rows: repeat(2, auto) 1fr repeat(2, auto)
+	&__logo
+		grid-column: 1/2
+		grid-row: 1/2
+		+r(1023)
+			display: flex
+			justify-content: center
+	&__about
+		grid-column: 1/2
+		grid-row: 2/3
+		+r(1023)
+			margin: 0 auto
+			max-width: 60%
+			text-align: center
+	&__socials
+		grid-column: 1/2
+		grid-row: 3/4
+		margin: 10px 0
+		+r(1023)
+			grid-row: 4/5
+	&__copy
+		grid-column: 1/2
+		grid-row: 4/5
+		font-size: 16px
+		line-height: 30px
+		color: #AFB5C0
+		+r(1023)
+			grid-row: 5/6
+			text-align: center
+		+r(899)
+			font-size: 12px
+	&__nav
+		grid-column: 2/3
+		grid-row: 1/5
+		+r(1023)
+			grid-column: 1/2
+			grid-row: 3/4
+		.menu
+			display: flex
+			justify-content: flex-end
+			+r(1023)
+				justify-content: center
+			& > * + *
+				margin: 0 0 0 8.75vw
+			&__link
+				margin: 5px 0 10px
+				padding: 5px 0
+				font-family: $f-medium
+				font-size: 18px
+				line-height: 30px
+				color: $c-text-dark
+				+trans(color)
+				+r(899)
+					margin: 0
+					font-size: 14px
+				&:hover
+					color: $c-theme
+		.submenu
+			&__link
+				padding: 5px 0
+				font-size: 16px
+				line-height: 30px
+				color: $c-text
+				+trans(color)
+				+r(899)
+					padding: 0
+					font-size: 12px
+				&:hover
+					color: $c-theme

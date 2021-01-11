@@ -1,0 +1,107 @@
+.btn
+	display: flex
+	justify-content: center
+	align-items: center
+	width: fit-content
+	height: fit-content
+	white-space: nowrap
+	cursor: pointer
+	+trans
+	&-theme
+		font-family: $f-bold
+		+pseudo
+		color: $c-white
+		background-color: $c-theme
+		border: 2px solid $c-theme
+		&:hover
+			color: $c-theme
+			background-color: $c-white
+			&::before
+				opacity: 1
+		&_reverse
+			color: $c-theme
+			background-color: $c-white
+			&:hover
+				color: $c-white
+				background-color: $c-theme
+		&_m
+			padding: 17.5px
+			min-width: 260px
+			font-size: 16px
+			line-height: 25px
+			border-radius: 10px
+			+r(899)
+				padding: 7.5px
+				min-width: 160px
+				font-size: 12px
+			&::before
+				width: 81%
+				border-radius: 10px
+			&:hover
+				&::before
+					top: 25.29px
+		&_s
+			padding: 13px
+			min-width: 177.88px
+			font-size: 16px
+			line-height: 19px
+			border-radius: 50px
+			+r(899)
+				padding: 5px
+				min-width: 77.88px
+				font-size: 12px
+			&::before
+				width: 71%
+				border-radius: 60px
+			&:hover
+				&::before
+					top: 17px
+		&::before
+			top: 0
+			z-index: -1
+			height: 100%
+			background-color: $c-theme-opacity
+			filter: blur(54px)
+			opacity: 0
+			+center(h)
+			+trans
+
+.sign-in,
+.sign-up
+	padding: 13px
+	font-family: $f-medium
+	font-size: 16px
+	line-height: 19px
+	+r(899)
+		padding: 5px
+		font-size: 12px
+
+.sign-in
+	color: $c-text-dark
+	&:hover
+		color: $c-theme
+
+.sign-up
+	+pseudo
+	min-width: 177.88px
+	color: $c-white
+	background-color: $c-theme
+	border: 2px solid $c-theme
+	border-radius: 50px
+	+r(899)
+		min-width: 77.88px
+	&:hover
+		color: $c-theme
+		background-color: $c-white
+		&::before
+			top: 17px
+	&::before
+		top: 0
+		z-index: -1
+		width: 71%
+		height: 100%
+		background-color: $c-theme-opacity
+		border-radius: 60px
+		filter: blur(54px)
+		+center(h)
+		+trans(top)

@@ -1,0 +1,56 @@
+<section id="help" class="help">
+  <div class="container">
+    <div class="help__wrapper">
+      {{ block.blockText(null, 'help', 'Trusted by Thousands of <br/> Happy Customer', 'm', 'These are the stories of our customers who have joined us with great pleasure when using this crazy feature.') }}
+      <div class="help__slider">
+        <div class="help-slider-container swiper-container">
+          <div class="help-slider swiper-wrapper">
+            {% for item in data.customers %}
+              <div class="help-slider__slide swiper-slide">
+                <div class="swiper-slide__help-card help-card">
+                  <div class="help-card__avatar">
+                    <img src="img/{{ item.src }}.png" alt="{{ item.name }}">
+                  </div>
+                  <div class="help-card__name">
+                    {{ item.name }}
+                  </div>
+                  <div class="help-card__location">
+                    {{ item.location }}
+                  </div>
+                  <div class="help-card__rating rating">
+                    <span class="rating__value">
+                      {{ item.rating }}
+                    </span>
+                    {% if item.rating >= 4 %}
+                      <span class="rating__icon height">
+                        {{mixins.icon('star')}}
+                      </span>
+                      {% elif item.rating < 4 %}
+                      <span class="rating__icon">
+                        {{mixins.icon('star')}}
+                      </span>
+                    {% endif %}
+                  </div>
+                  <div class="help-card__text text text_m">
+                    "{{ item.text | safe }}".
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="help-slider-nav">
+          <div class="help-slider-nav__pagination swiper-pagination"></div>
+          <div class="help-slider-nav__buttons">
+            <div class="help-slider-nav__button help-prev swiper-button-prev">
+              {{ mixins.icon('arrow-left') }}
+            </div>
+            <div class="help-slider-nav__button help-next swiper-button-next">
+              {{ mixins.icon('arrow-right') }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

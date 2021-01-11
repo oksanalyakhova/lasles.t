@@ -1,0 +1,78 @@
+.results
+	padding: 37.21px 0
+	display: flex
+	background-color: $c-white
+	border-radius: 10px
+	+pseudo
+	+r(1023)
+		margin: 0 auto
+		padding: 0 47.21px
+		max-width: 500px
+		flex-direction: column
+	&::before
+		top: 26.4%
+		+center(h)
+		z-index: -1
+		width: 93.68%
+		height: 94.6%
+		background-color: #0D1025
+		filter: blur(114px)
+		opacity: 0.06
+		border-radius: 10px
+	& > * + *
+		border-left: 2px solid $c-border
+		+r(1023)
+			border-top: 2px solid $c-border
+			border-left: none
+	&__item
+		padding: 30.85px 10px
+		flex-grow: 1
+		display: flex
+		justify-content: center
+		align-items: center
+		+r(1023)
+			padding: 50.85px 10px
+		+r(899)
+			padding: 25.85px 10px
+		& > * + *
+			margin: 0 0 0 36.5px
+			+r(899)
+				margin: 0 0 0 15px
+		//&:nth-child(1)
+		//	padding: 30.285px 11.4036% 30.285px 7.9825%
+		//&:nth-child(2)
+		//	padding: 30.285px 11.7982% 30.285px 9.9123%
+		//&:nth-child(3)
+		//	padding: 30.285px 7.9386% 30.285px 7.9825%
+		.icon-wrap
+			width: 55px
+			height: 55px
+			display: flex
+			justify-content: center
+			align-items: center
+			background-color: #FFECEC
+			border-radius: 50%
+			+r(899)
+				width: 30px
+				height: 30px
+		.icon
+			width: 24px
+			height: 24px
+			fill: $c-theme
+			+r(899)
+				width: 15px
+				height: 15px
+		.data
+			margin-bottom: 5px
+			font-family: $f-bold
+			font-size: 25px
+			line-height: 30px
+			color: $c-text-dark
+			+r(899)
+				margin-bottom: 0
+				font-size: 18px
+		.label
+			font-size: 20px
+			line-height: 30px
+			+r(899)
+				font-size: 14px

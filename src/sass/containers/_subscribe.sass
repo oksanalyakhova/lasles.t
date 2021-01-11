@@ -1,0 +1,33 @@
+.subscribe
+	margin: 0 150px
+	padding: 58.5px 70px
+	width: calc(100% - 300px)
+	display: flex
+	align-items: center
+	justify-content: space-between
+	background-color: $c-white
+	border-radius: 10px
+	+pseudo
+	position: absolute
+	top: 0
+	+r(1023)
+		margin: 0 15px
+		padding: 28.5px 30px
+		width: calc(100% - 30px)
+		flex-direction: column
+	&::before
+		top: 7.0815%
+		+center(h)
+		z-index: -1
+		width: 94.4886%
+		height: 107.2961%
+		background-color: #0D1025
+		filter: blur(114px)
+		opacity: 0.06
+		border-radius: 10px
+	&__block-text
+		width: 39.9649%
+		+r(1023)
+			margin-bottom: 30px
+			width: 89.9649%
+			text-align: center

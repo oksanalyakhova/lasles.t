@@ -1,0 +1,83 @@
+.plan
+	z-index: 1
+	padding: 79.63px 0 50px
+	width: calc(33.3333% - 2.3148vw)
+	display: flex
+	flex-direction: column
+	align-items: center
+	background-color: $c-white
+	border: 2px solid
+	border-color: #DDDDDD
+	border-radius: 10px
+	+trans(border-color)
+	+r(1023)
+		padding: 39.63px 69.63px 40px
+		width: fit-content
+	+r(899)
+		padding: 19.63px 39.63px 20px
+	&:hover
+		border-color: $c-theme
+	&__media
+		margin-bottom: 30px
+		width: 9.96vw
+		+r(1023)
+			margin-bottom: 15px
+			width: 84px
+		svg
+			width: 100%
+			height: auto
+	&__title
+		margin-bottom: 30px
+		font-family: $f-medium
+		font-size: 18px
+		line-height: 30px
+		color: $c-text-dark
+		+r(1023)
+			margin-bottom: 15px
+		+r(899)
+			font-size: 16px
+	&__list
+		margin-bottom: 50px
+		+r(1023)
+			margin-bottom: 25px
+			white-space: nowrap
+		+r(899)
+			margin-bottom: 15px
+		& > * + *
+			margin: 10px 0 0
+			+r(1023)
+				margin: 0
+		li
+			position: relative
+			padding-left: 44.17px
+			font-size: 14px
+			line-height: 30px
+			+pseudo
+			+r(899)
+				padding-left: 24.17px
+				font-size: 12px
+			&::before
+				top: 9px
+				left: 6px
+				z-index: 1
+				width: 12px
+				height: 7px
+				border-left: 2px solid $c-green
+				border-bottom: 2px solid $c-green
+				transform: rotate(-45deg)
+				+r(899)
+					top: 11px
+					width: 6px
+					height: 3.5px
+	&__price
+		margin-top: auto
+		margin-bottom: 20px
+		display: flex
+		justify-content: center
+		font-size: 25px
+		line-height: 30px
+		+r(899)
+			font-size: 18px
+		.data
+			font-family: $f-medium
+			color: $c-text-dark

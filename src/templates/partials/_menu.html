@@ -1,0 +1,11 @@
+<nav class="site-nav" aria-label="Site navigation">
+    <ul class="menu">
+      {% for item in data.siteNav %}
+        <li class="menu__item">
+          <a class="menu__link" data-href="{{ item.url }}">
+            {{ item.label }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+</nav>

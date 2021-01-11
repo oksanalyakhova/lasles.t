@@ -1,0 +1,130 @@
+.hero
+	&__wrapper
+		padding: 68.49px 0 103px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+r(1023)
+			padding: 38.49px 0
+			flex-direction: column-reverse
+		+r(899)
+			padding-top: 18.49px
+		& > * + *
+			margin: 0 0 0 2.83vw
+			+r(1023)
+				margin: 0 0 30px
+	&__content
+		flex: none
+		width: 48.685%
+		+r(1023)
+			width: 80%
+		.btn
+			margin-top: 50px
+			+r(899)
+				margin-top: 30px
+	&__media
+		flex-grow: 1
+		margin-right: -67px
+		+r(1439)
+			margin-right: -17px
+		+r(1023)
+			margin-right: 0
+		svg
+			width: 100%
+			height: auto
+	&__results
+		width: 100%
+
+.features
+	&__wrapper
+		padding: 150px 0 126.73px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+r(1023)
+			padding: 60px 0 56.73px
+			flex-direction: column
+		& > * + *
+			margin: 0 0 0 11.7694vw
+			+r(1023)
+				margin: 30px 0 0
+	&__media
+		flex-grow: 1
+		svg
+			width: 100%
+			height: auto
+	&__content
+		flex: none
+		width: 37.5333%
+		+r(1023)
+			width: 80%
+
+.pricing
+	padding: 80.27px 0 150px
+	+g($c-bg, $c-white)
+	+r(1023)
+		padding: 60.27px 0 50px
+	&__wrapper
+		padding: 0 26.02px 0 24.14px
+	&__block-text
+		margin: 0 auto 60px
+		max-width: 50.924%
+		text-align: center
+		+r(1023)
+			margin: 0 auto 30px
+			max-width: 80.924%
+	&__plans
+		+r(1023)
+			margin-right: -41.02px
+			padding-bottom: 10px
+			overflow-x: auto
+			+smooth-scroll
+	.plans
+		display: flex
+		+r(1023)
+			padding-right: 41.02px
+			width: fit-content
+		& > * + *
+			margin: 0 0 0 3.4722vw
+			+r(1023)
+				margin: 0 0 0 20px
+
+.testimonials
+	margin-bottom: 124.16px
+	+r(1023)
+		margin-bottom: 54px
+	&__block-text
+		margin: 0 auto 155.82px
+		max-width: 50.924%
+		text-align: center
+		+r(1023)
+			margin: 0 auto 55.82px
+			max-width: 80.924%
+	&__map
+		margin-bottom: 109.97px
+		padding: 0 41.02px 0 39.14px
+		+r(1023)
+			margin-bottom: 49.97px
+			padding: 0
+		svg
+			width: 100%
+			height: auto
+	&__clients
+		+r(1023)
+			margin-right: -15px
+			padding-bottom: 10px
+			overflow-x: scroll
+			+smooth-scroll
+
+.help
+	margin-bottom: 65.02px
+	+r(1023)
+		margin-bottom: 35px
+	&__block-text
+		margin: 0 auto 60px
+		max-width: 50.924%
+		text-align: center
+		+r(1023)
+			max-width: 80.924%
+	&__slider
+		position: relative
