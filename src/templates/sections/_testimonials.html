@@ -3,7 +3,7 @@
     <div class="testimonials__wrapper">
       {{ block.blockText(null, 'testimonials', 'Huge Global Network <br/> of Fast VPN', 'm', 'See LaslesVPN everywhere to make it easier for you when you move locations.') }}
       <div class="testimonials__map">
-        {% include "svg/_map-svg.html" %}
+        {{mixins.object('map')}}
       </div>
       <div class="testimonials__clients">
         <div class="clients">

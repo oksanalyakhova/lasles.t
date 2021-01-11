@@ -2,6 +2,10 @@
 <svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
 
+{% macro object(svg) %}
+<object class="svg svg-{{svg}}" type="image/svg+xml" data="img/{{svg}}.svg"></object>
+{% endmacro %}
+
 {% macro btnTheme(size, class, text, type) %}
 <button class="btn btn-theme btn-theme_{{ size }} {{ class }}" type="{{ type }}">
   {{ text }}
