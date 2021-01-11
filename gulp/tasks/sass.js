@@ -4,8 +4,10 @@ import sourcemaps from 'gulp-sourcemaps';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 // import mqpacker from 'css-mqpacker';
+import cssnano from  'gulp-cssnano';
 import config from '../config';
 import csso from 'postcss-csso';
+import rename from 'gulp-rename';
 
 const isMax = mq => /max-width/.test(mq);
 const isMin = mq => /min-width/.test(mq);
@@ -46,7 +48,9 @@ gulp.task('sass', () => gulp
       precision: 5
   }))
   .on('error', config.errorHandler)
+  .pipe(rename({ suffix: '.min' }))
   .pipe(postcss(processors))
+  .pipe(cssnano())
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest(config.dest.css))
 );
