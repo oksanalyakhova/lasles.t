@@ -89,7 +89,11 @@ export default class InitApp {
   }
 
   mobileMenuProps() {
-    this.burger.classList.contains('is-active') ? this.removeActivesMobile() : this.addActivesMobile();
+    if (this.burger.classList.contains('is-active')) {
+      this.removeActivesMobile();
+    } else {
+      this.addActivesMobile();
+    }
   }
 
   addActivesMobile() {
@@ -127,9 +131,9 @@ export default class InitApp {
   }
 
   scrollToSection(section) {
-    const top = section.offsetTop;
+    this.top = section.offsetTop;
     window.scrollTo({
-      top: top - 120,
+      top: this.top - 120,
       behavior: "smooth"
     });
   }
