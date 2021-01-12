@@ -7,7 +7,7 @@
           <div class="plans">
             <div class="plans__item plan">
               <div class="plan__media">
-                {{mixins.object('free')}}
+                {% include "svg/_free.html" %}
               </div>
               <div class="plan__title">
                 Free Plan
@@ -28,7 +28,7 @@
             </div>
             <div class="plans__item plan">
               <div class="plan__media">
-                {{mixins.object('standard')}}
+                {% include "svg/_standart.html" %}
               </div>
               <div class="plan__title">
                 Standard Plan
@@ -52,7 +52,7 @@
             </div>
             <div class="plans__item plan">
               <div class="plan__media">
-                {{mixins.object('premium')}}
+                {% include "svg/_premium.html" %}
               </div>
               <div class="plan__title">
                 Premium Plan

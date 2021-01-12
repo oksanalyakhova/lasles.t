@@ -2,7 +2,7 @@
   <div class="container">
     <div class="features__wrapper">
       <div class="features__media">
-        {{mixins.object('features')}}
+        {% include "svg/_features.html" %}
       </div>
       <div class="features__content">
         {% set items = data.features %}

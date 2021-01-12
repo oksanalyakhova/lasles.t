@@ -3,8 +3,7 @@ const urlsToCash = [
   '/',
   '/page.html',
   '/css/app.min.css',
-  '/js/app.js',
-  '/img/*'
+  '/js/app.js'
 ]
 
 self.addEventListener('install', event => {
