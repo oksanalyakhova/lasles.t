@@ -30,7 +30,6 @@ gulp.task('copy:lib', () => gulp
 
 gulp.task('copy:rootfiles', () => gulp
   .src(config.src.root + '/*.*')
-  .src(config.src.root + '/*.js')
   .pipe(gulp.dest(config.dest.root))
 );
 

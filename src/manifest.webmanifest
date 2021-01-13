@@ -1,0 +1,22 @@
+{
+  "name": "LaslesVPN: Want anything to be easy with LaslesVPN",
+  "short_name": "LaslesVPN",
+  "description": "Want anything to be easy with LaslesVPN",
+  "icons": [
+    {
+      "src": "/img/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#FFFFFF"
+}
