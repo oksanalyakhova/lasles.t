@@ -1,12 +1,12 @@
-<section id="pricing" class="pricing">
+<section id="pricing" class="section pricing">
   <div class="container">
     <div class="pricing__wrapper">
       {{ block.blockText(null, 'pricing', 'Choose Your Plan', 'm', 'Let&#39;s choose the package that is best for you and explore it happily and cheerfully.') }}
       <div class="plans-wrap">
         <div class="pricing__plans">
-          <div class="plans">
+          <div class="plans card">
             <div class="plans__item plan">
-              <div class="plan__media">
+              <div class="plan__media media">
                 {% include "svg/_free.html" %}
               </div>
               <div class="plan__title">
@@ -27,7 +27,7 @@
               {{ mixins.linkTheme('s', 'btn-theme_reverse', 'Select', '#') }}
             </div>
             <div class="plans__item plan">
-              <div class="plan__media">
+              <div class="plan__media media">
                 {% include "svg/_standart.html" %}
               </div>
               <div class="plan__title">
@@ -51,7 +51,7 @@
               {{ mixins.linkTheme('s', 'btn-theme_reverse', 'Select', '#') }}
             </div>
             <div class="plans__item plan">
-              <div class="plan__media">
+              <div class="plan__media media">
                 {% include "svg/_premium.html" %}
               </div>
               <div class="plan__title">

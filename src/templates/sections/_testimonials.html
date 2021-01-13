@@ -1,12 +1,12 @@
-<section id="testimonials" class="testimonials">
+<section id="testimonials" class="section testimonials">
   <div class="container">
     <div class="testimonials__wrapper">
       {{ block.blockText(null, 'testimonials', 'Huge Global Network <br/> of Fast VPN', 'm', 'See LaslesVPN everywhere to make it easier for you when you move locations.') }}
-      <div class="testimonials__map">
+      <div class="testimonials__map media">
         {% include "svg/_map.html" %}
       </div>
       <div class="testimonials__clients">
-        <div class="clients">
+        <div class="clients card">
           {% for item in data.clients %}
             <div class="clients__item">
               <img src="img/{{ item.src }}.png" alt="{{ item.alt }}">
