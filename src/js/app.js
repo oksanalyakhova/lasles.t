@@ -1,5 +1,5 @@
 import InitApp from './_init';
-import ScrollAnimApp from "./_scrollAnim";
+import ScrollAnimApp from './_scrollAnim';
 
 const app = new InitApp();
 app.initEvents();

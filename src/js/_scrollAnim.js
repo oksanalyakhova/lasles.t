@@ -1,5 +1,5 @@
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,8 +13,8 @@ function transitionProps(el, d, direction) {
     x: 0,
     y: 0,
     autoAlpha: 1,
-    ease: "expo",
-    overwrite: "auto",
+    ease: 'expo',
+    overwrite: 'auto',
     stagger: st,
     delay: d
   });
@@ -28,8 +28,8 @@ function show(el) {
   gsap.to(el, {
     duration: 1,
     autoAlpha: 1,
-    ease: "expo",
-    overwrite: "auto",
+    ease: 'expo',
+    overwrite: 'auto',
     delay: 0.5
   });
 }
