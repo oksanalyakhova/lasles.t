@@ -17,3 +17,19 @@
   {{ text }}
 </a>
 {% endmacro %}
+
+{% macro pictureJpg(img, alt) %}
+<picture>
+  <source srcset="img/{{img}}.webp" type="image/webp">
+  <source srcset="img/{{img}}.jpg" type="image/jpeg">
+  <img src="img/{{img}}.jpg" alt="{{alt}}" width="{{width}}" height="{{height}}">
+</picture>
+{% endmacro %}
+
+{% macro picturePng(img, alt) %}
+<picture>
+  <source srcset="img/{{img}}.webp" type="image/webp">
+  <source srcset="img/{{img}}.png" type="image/jpeg">
+  <img src="img/{{img}}.png" alt="{{alt}}" width="{{width}}" height="{{height}}">
+</picture>
+{% endmacro %}

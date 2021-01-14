@@ -2,7 +2,7 @@
   {% for item in data.socials %}
   <li class="socials__item">
     <a class="socials__link" href="https://{{ item.url }}" target="_blank" rel="nofollow noreferrer noopener">
-      <svg class="icon icon-{{ item.icon }}"><use xlink:href="img/sprite.svg#icon-{{ item.icon }}"></use></svg>
+      {{ mixins.icon(item.icon) }}
       <span>{{ item.icon }}</span>
     </a>
   </li>

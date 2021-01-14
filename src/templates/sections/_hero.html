@@ -14,7 +14,7 @@
         {% for item in data.results %}
         <div class="results__item">
           <div class="icon-wrap">
-            <svg class="icon icon-{{item.icon}}"><use xlink:href="img/sprite.svg#icon-{{item.icon}}"></use></svg>
+            {{ mixins.icon(item.icon) }}
           </div>
           <div class="content">
             <div class="data">{{ item.data }}</div>

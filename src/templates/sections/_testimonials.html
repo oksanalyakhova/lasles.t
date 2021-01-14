@@ -9,7 +9,7 @@
         <div class="clients card">
           {% for item in data.clients %}
             <div class="clients__item">
-              <img src="img/{{ item.src }}.png" alt="{{ item.alt }}">
+              {{ mixins.picturePng(item.src, item.alt, '243', '73') }}
             </div>
           {% endfor %}
         </div>

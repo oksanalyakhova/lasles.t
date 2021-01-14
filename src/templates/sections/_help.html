@@ -9,7 +9,7 @@
               <div class="help-slider__slide swiper-slide">
                 <div class="swiper-slide__help-card help-card">
                   <div class="help-card__avatar">
-                    <img src="img/{{ item.src }}.png" alt="{{ item.name }}">
+                    {{ mixins.picturePng(item.src, item.name, '67', '68') }}
                   </div>
                   <div class="help-card__name">
                     {{ item.name }}
