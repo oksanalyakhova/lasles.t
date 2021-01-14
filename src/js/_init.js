@@ -85,7 +85,9 @@ export default class InitApp {
   }
 
   mobileMenu() {
-    this.burger.addEventListener('click', () => this.mobileMenuProps());
+    this.burger.addEventListener('click', () => {
+      this.mobileMenuProps();
+    });
   }
 
   mobileMenuProps() {
